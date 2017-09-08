@@ -8,9 +8,12 @@ public class Bounce : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
+
+
+	float time = 0f;
 	void Update () {
-		
+		time += Time.deltaTime;
+		float y = Mathf.Cos (time);
+		this.transform.position = new Vector3 (0, y, 4);
 	}
 }
